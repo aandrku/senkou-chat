@@ -1,0 +1,97 @@
+@use "./variables/auth";
+
+html {
+  background: auth.$bg-color;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 28px;
+
+}
+
+body {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+
+  height: 3rem;
+  margin-bottom: 6rem;
+
+
+  color: auth.$font-color;
+
+  border-radius: 0.5rem;
+
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: auth.$btn-background;
+
+  user-select:none;
+  -ms-user-select: none;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+
+  .btn__left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    padding-left: 1rem;
+
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .btn__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 3rem;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.4rem;
+
+      
+    }
+    
+  }
+
+
+}
+
+.canvas {
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  background: auth.$bg-color;
+  
+  z-index: -1;
+
+
+}
