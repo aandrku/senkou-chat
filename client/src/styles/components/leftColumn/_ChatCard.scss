@@ -1,0 +1,41 @@
+@use "../../variables/colors";
+
+.chat-card {
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+
+  height: 3.5rem;
+
+
+  .chat-card__left {
+    width: 3.5rem;
+    height: 100%;
+
+    padding: 0.4rem;
+    box-sizing: border-box;
+
+    .chat-card__icon {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      background: colors.$search-input-background;
+
+    }
+
+  }
+
+  .chat-card__middle {
+    flex-grow: 1;
+
+    height: 100%;
+  }
+
+  .chat-card__right {
+    width: 3.5rem;
+    height: 100%;
+
+  }
+
+}

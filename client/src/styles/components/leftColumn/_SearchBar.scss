@@ -1,0 +1,71 @@
+@use "../../variables/colors";
+
+.search-bar {
+
+  position: sticky;
+  top: 0;
+
+  display:flex;
+  flex-direction: row;
+
+  height: 3.5rem;
+
+  background: colors.$background;
+
+  .search-bar__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 100%;
+    padding: 0.1rem;
+    box-sizing: border-box;
+
+
+    svg {
+      height: 100%;
+    }
+
+  }
+
+  .search-bar__right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    height: 100%;
+    box-sizing: border-box;
+
+    input {
+      width: 90%;
+      height: 75%;
+      padding-left: 1rem;
+      box-sizing: border-box;
+
+      border-radius: 0.7rem;
+       
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      background: colors.$search-input-background;
+
+      font-size: 1.1rem;
+      color: colors.$font-color-primary;
+      
+      border: none;
+    }
+
+    input:focus {
+      outline: none;
+      border: none;
+    }
+
+    
+
+  }
+
+}
