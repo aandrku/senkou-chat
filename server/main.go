@@ -3,9 +3,13 @@ package main
 import (
 	"log"
 	"net/http"
+	"senkou-chat/internal/auth"
 )
 
 func main() {
+
+
+	authMux := auth.Mux()
 
 	fs := http.FileServer(http.Dir("."))
 
@@ -15,6 +19,7 @@ func main() {
 	mainMux.Handle("/css/", fs)
 	mainMux.Handle("/assets/", fs)
 
+	mainMux.Handle("/auth/", http.StripPrefix("/auth", authMux))
 	mainMux.HandleFunc("/", RootHandleFunc)
 
 	server := http.Server{
